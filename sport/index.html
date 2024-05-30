@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comforter+Brush&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Freeman&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="scrollreveal.min.js"></script>
+
+    <style>
+        img {
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden !important;
+        }
+
+        /* .fixed-fon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-image: url(big-foto5.jpg);
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: 1s;
+        } */
+
+        /* .img-f {
+            display: none;
+        } */
+
+        .use {
+            background: linear-gradient(#71cbecb5, rgba(137, 137, 245, 0.791), rgba(106, 59, 106, 0.805), rgba(92, 170, 248, 0.847));
+        }
+
+
+        .cards {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            margin: 30px;
+        }
+
+        .cards_item:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .card {
+            height: 100%;
+            margin: 20px;
+            background-color: #bfbfbf;
+            border: 1px solid #4b8246;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all .125s ease;
+
+        }
+
+        .card:hover {
+            transform: scale(0.9);
+        }
+
+        .card:hover .card-content {
+            position: absolute;
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .gym-1,
+        .gym-2 {
+            transition: .5s;
+        }
+
+        .gym-1:hover,
+        .gym-2:hover {
+            /* transform: scale(2); */
+            cursor: crosshair;
+            /* box-shadow: 0px 0px 10px yellow; */
+        }
+
+        .gym-1,
+        .gym-2,
+        .gym-3 {
+            border-radius: 50%;
+        }
+
+
+        .card-image {
+            height: 250px;
+        }
+
+        .card_image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card_content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card_title {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .card_descr {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .card_btn {
+            border: none;
+            padding: 10px, 20px;
+            color: #ffff;
+            background-color: rgb(0, 0, 0);
+            cursor: pointer;
+            margin-top: auto;
+        }
+
+
+
+
+
+        .cards_item2 {
+            height: 100%;
+
+        }
+
+
+        .cards_item2:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .card2 {
+            height: 100%;
+            margin: 15px;
+            background-color: #91ef89;
+            margin: 15px;
+            border: 1px solid #4b8246;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+
+
+        .card-image2 {
+            height: 250px;
+        }
+
+        .card_content2 {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card_title2 {
+            margin: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card_descr2 {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .card_btn2 {
+            border: none;
+            padding: 5px 20px;
+            color: #ffff;
+            background-color: rgb(45, 44, 44);
+            cursor: pointer;
+            margin-top: auto;
+            border-radius: 5px;
+
+        }
+
+        .card_btn2:hover {
+            background-color: #0d0c05;
+            outline-color: transparent;
+            outline-style: solid;
+            /* box-shadow: 0 0 0 2px #1e94ed; */
+            font-size: 1.01em;
+
+        }
+
+
+
+        .cards_item2,
+        .cards_item {
+            height: 100%;
+
+        }
+
+        .move-top {
+            position: fixed;
+            right: 50px;
+            bottom: 70px;
+            /* background-color: rgb(29, 13, 43); */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: rgb(33, 33, 33);
+            font-weight: 600;
+            /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.872); */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+            font-size: 2em;
+            animation: ttop 0.5s infinite alternate;
+
+        }
+
+        @keyframes ttop {
+            0% {
+                bottom: 50px;
+            }
+
+            100% {
+                bottom: 70px;
+            }
+        }
+
+        .move-top>p {
+            margin: 0;
+            padding: 0;
+            color: aliceblue;
+
+        }
+
+        .text-1 {
+            text-align: center;
+
+        }
+
+        .part1 {
+            padding: 50px;
+
+        }
+
+        .carousel-indicators button {
+            color: aliceblue;
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.592);
+        }
+
+        .tema-1 {
+            font-size: 5rem;
+            /* height: 140px; */
+            color: white;
+
+
+        }
+
+        .tema-2 {
+            font-size: 5rem;
+            /* height: 140px; */
+            color: white;
+
+        }
+
+        .tema-3 {
+            font-size: 5rem;
+            /* height: 140px; */
+            color: white;
+
+        }
+
+
+        .tema-4 {
+            /* height: 250px; */
+            color: white;
+            font-size: 20px;
+        }
+
+        .tema-5 {
+            /* height: 250px; */
+            color: white;
+            font-size: 20px;
+        }
+
+        .tema-6 {
+            /* height: 250px; */
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .nav-link {
+            color: aliceblue;
+            font-size: 1.2em;
+
+        }
+
+        .nav-link.tw:hover {
+            box-shadow: inset 0 -7px 9px -7px rgba(0, 0, 0, 0.7);
+            font-weight: 900;
+        }
+
+        .logo-img {
+            width: 100px;
+            transition: 0.5s;
+        }
+
+        .logo-img:hover {
+            transform: rotate(360deg) scale(1.5);
+
+
+        }
+
+
+
+        footer {
+            background-color: rgb(59, 59, 59);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-top: 50px;
+            color: beige
+        }
+
+        .socio-link {
+            color: rgb(149, 149, 149);
+            text-decoration: none;
+            margin: 10px;
+            font-size: 2rem;
+        }
+
+        .inst:hover {
+            color: rgb(230, 11, 120);
+        }
+
+        .fsb:hover {
+            color: blue
+        }
+
+        .yout:hover {
+            color: rgb(255, 0, 0);
+        }
+
+        .tw:hover {
+            color: rgb(58, 163, 255)
+        }
+
+        .ukr-p {
+            /* font-family: "Comforter Brush", cursive; */
+            font-family: "Caveat", cursive;
+            text-align: center;
+            font-size: 2.5em;
+
+        }
+
+        .mot {
+            font-family: bold;
+            font-size: 2.5em;
+        }
+
+        .text-1 {
+            font-family: "Exo 2", cursive;
+
+        }
+
+        .cont-1 {
+            font-family: "Freeman", sans-serif;
+        }
+
+        .cont-2 {
+            font-family: "Freeman", sans-serif;
+        }
+
+        .cont-3 {
+            font-family: "Freeman", sans-serif;
+        }
+
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .col-sm-12.col-md-6.col-lg-4.col-xl-3 {
+            padding: 20px 0;
+        }
+
+        @media (max-width: 576px) {
+            .logo-img {
+                width: 40px;
+            }
+        }
+
+        .kinds {
+            font-size: 2.5em;
+        }
+
+        .m-5 {
+            text-align: center;
+        }
+
+        .mot {
+            text-align: center;
+        }
+
+
+
+
+
+        .img-f {
+            display: none;
+        }
+
+        .more-info-div {
+            position: fixed;
+            left: 0;
+            top: 10%;
+            bottom: 10%;
+            height: 600px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: #f6f6f6ed;
+            border: 1px solid #89efef;
+            width: 0;
+            padding: 15px;
+            padding-top: 20px;
+            display: none;
+        }
+
+        .close-more-div {
+            position: absolute;
+            left: 5px;
+            top: 0px;
+            width: 15px;
+            font-weight: 900;
+            font-size: 1.2em;
+        }
+
+        .close-more-div:hover {
+            cursor: pointer;
+            color: #008d00;
+        }
+
+        @keyframes move {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 250px;
+            }
+        }
+
+        .prava {
+
+            font-size: large;
+        }
+
+        .card2 {
+            transition: 0.5s;
+        }
+
+        .card2:hover {
+            box-shadow: 0px 0px 10px 2px #91ef89;
+            transform: scale(1.05);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    <div class="fixed-fon">
+        <img class="img-f" src="big-foto1.jpg" alt="">
+        <img class="img-f" src="big-foto2.jpg" alt="">
+        <img class="img-f" src="big-foto3.jpg" alt="">
+        <img class="img-f" src="big-foto4.jpg" alt="">
+        <img class="img-f" src="big-foto5.jpg" alt="">
+    </div> -->
+    <a href="#">
+        <div class="move-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logo-img" src="sports-logo-2.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navi">Мета</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#motiv">Мотивація</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kind">Види спорту</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- <div class="container-fluid"> -->
+    <div id="carouselExampleDark" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="sport1.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="tema-1">NO PAIN NO GAIN</h5>
+                    <p class="ukr-p">Немає болю немає результату!</p>
+                    <p class="tema-4">Having a perfect body requires a lot of training. Nice-looking body and powerful
+                        organism are interconnected – and we can help you with both.Clients of our gym receive not only
+                        necessary equipment for their workouts but also
+                        friendly support in achieving their number one training goal..</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Sport2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="tema-2">GO THE DISTANCE</h5>
+                    <p class="ukr-p">Пройти дистанцію!</p>
+                    <div class="d-none d-lg-block">
+                        <p class="tema-5">Clients of our gym receive not only
+                            necessary equipment for their workouts but also
+                            friendly support in achieving their number one training goal..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="sport3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="tema-3">NEVER GIVE UP</h5>
+                    <p class="ukr-p">Ніколи не здавайся!</p>
+                    <div class="d-none d-lg-block">
+                        <p class="tema-6">Every bodybuilder requires a lot of dedication and effort to shape his/her
+                            body
+                            into
+                            something to be proud of. We can give you everything you need for it..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    </div>
+    <section class="use">
+        <section class="sport">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="navi" class="text-1 p-5">Навіщо займатись спортом?</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="part1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="Yakisna">Якісна зміна тіла та зовнішнього вигляду загалом</h2>
+                        <p class="cont-1">Ні для кого не секрет, що завдяки регулярним спортивним заняттям покращується
+                            фізична форма,
+                            накачуються м’язи, зменшуються об’єми, тіло стає більш привабливим та підтягнутим в цілому.
+                            Якщо
+                            пошукати інформацію, наприклад, в Інтернеті, то можна виявити незліченну кількість
+                            прикладів,
+                            коли люди кардинально змінювали свою зовнішність: накачуючи м’язи, з вічних «скелетиків», і
+                            з
+                            товстунів ставали людьми з приголомшливою фігурою. Так, вчені довели, що заняття спортом
+                            здатні
+                            усунути навіть спадкову схильність до ожиріння. Для багатьох саме це і є найбільш сильною
+                            мотивацією.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="gym-1" src="gym1jpg.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 p-5">
+                    <img class="gym-2" src="gym2.jpg" alt="">
+                </div>
+                <div class="col-md-6 p-5">
+                    <h2 class="pokrash">Покращення здоров’я</h2>
+                    <p class="cont-2">У людей, що займаються спортом (навіть у непрофесійних спортсменів) здоров’я в
+                        рази
+                        міцніше, ніж у
+                        тих, хто не займається ним. І це неспроста: заняття спортом покращують роботу серця,
+                        нормалізують
+                        кров’яний тиск, позитивно впливають на всі життєво важливі системи організму, а також покращують
+                        мозкову активність і уповільнюють процеси старіння. І ще один загальновідомий факт, який
+                        являється
+                        відмінним аргументом на користь спорту – тренування зміцнюють імунітет. Вчені довели, що ті, хто
+                        практикує фізичні навантаження мінімум 3 рази в тиждень, хворіють в рази менше. Тому
+                        загартовуйте
+                        свій організм, тренуйтеся і будете здоровішими. </p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 p-5">
+                    <h2 class="gartyvan">Гартування характеру</h2>
+                    <p class="cont-3">Регулярні заняття спортом впливають на власну самодисципліну, вироблення сили
+                        волі.
+                        Так, у 2006 році
+                        австралійські науковці виявили, що регулярні спортивні заняття дозволяють виробляти силу волі не
+                        тільки під час занять спортом, але і у звичайному житті. Учасники дослідження мали виконувати
+                        певний
+                        комплекс силових вправ протягом двох місяців, збільшуючи навантаження. Через два місяці
+                        дослідники
+                        проаналізували, що у більшості людей змінився спосіб життя, вони позбулись шкідливих звичок,
+                        перебували у кращому настрої та були активнішими загалом. Тому, займаючись спортом, людина може
+                        круто змінити себе, свою особистість і своє життя. </p>
+                </div>
+                <div class="col-md-6 p-5">
+                    <img class="gym-3" src="gym3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="Motivation">
+            <h2 id="motiv" class="mot p-5">Поради, щоб швидко не вигоріти від спорту</h2>
+            <div class=" container ">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item">
+                            <article class="card">
+                                <div class="card_image">
+                                    <img src="Health.jpg" alt="">
+                                </div>
+                                <div class="card_content">
+                                    <b>
+                                        <p class="card_title">Поставте собі мету</p>
+                                    </b>
+                                    <p class="card_descr">Щоб з'явилося сильне бажання займатися спортом, дуже важливо
+                                        мати
+                                        мету
+                                        і
+                                        крок за кроком до неї йти. Нехай вона буде конкретною, досяжною і в ідеалі
+                                        обмеженою
+                                        в
+                                        часі.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item">
+                            <article class="card">
+                                <div class="card_image">
+                                    <img src="company.jpg" alt="">
+                                </div>
+                                <div class="card_content">
+                                    <b>
+                                        <p class="card_title">Тренуйтеся в компанії</p>
+                                    </b>
+                                    <p class="card_descr">Іноді складно почати ходити до спортзалу. Коли є компанія хоча
+                                        б з
+                                        одного друга зібратися займатися спортом
+                                        легше.Якщо лінь не дає встати з ліжка рано вранці, друг подзвонить і нагадає, що
+                                        пора
+                                        йти на
+                                        тренування і для чого взагалі все це потрібно. </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item">
+                            <article class="card">
+                                <div class="card_image">
+                                    <img src="zvuchka.jpg" alt="">
+                                </div>
+                                <div class="card_content">
+                                    <b>
+                                        <p class="card_title">Зробіть заняття спортом звичкою</p>
+                                    </b>
+                                    <p class="card_descr">Звичка - це те, від чого нам так складно відмовитися і те, що
+                                        ми
+                                        робимо
+                                        регулярно. А отже, правильним рішенням для всіх, хто хоче займатися спортом,
+                                        буде
+                                        виробити в
+                                        себе таку корисну звичку. </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item">
+                            <article class="card">
+                                <div class="card_image">
+                                    <img src="krasa.jpg" alt="">
+                                </div>
+                                <div class="card_content">
+                                    <b>
+                                        <p class="card_title">Знайдіть свою мотивацію</p>
+                                    </b>
+                                    <p class="card_descr">Коли лінь не дає навіть шансу піти до спортзалу або хоча б
+                                        вранці
+                                        робити
+                                        зарядку, пробіжку, важливо знайти мотивацію. Якщо у вас уже є мета схуднути,
+                                        обов'язково
+                                        у
+                                        свій план включіть заняття спортом. </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types-sports">
+            <h2 id="kind" class="kinds m-5">Кілька видів спорту, у які, виявляється, грають в Україні</h2>
+            <div class="container ">
+                <div class="row justify-content-center ">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+
+
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="beysboll.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2"> Бейсбол</p>
+                                    </b>
+                                    <p class="card_descr2">Про бейсбол в Україні знають переважно із американських
+                                        фільмів
+                                        середини 90-х років. Цей вид спорту мегапопулярний за океаном. Бейсбол – вид
+                                        спорту
+                                        №1 у США. Гравці – кумири мільйонів дітей і мають мільйонні контракти.</p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="american.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Американський футбол</p>
+                                    </b>
+                                    <p class="card_descr2">Історія виникнення американського футболу в Україні схожа до
+                                        бейсболу. Про цей вид спорту
+                                        також всі дізнались із американських фільмів, от і з’явились ентузіасти, які
+                                        розповсюдили його в Україні. Зараз в Україні існує понад 20 команд.</p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="water-polo.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Водне поло</p>
+                                    </b>
+                                    <p class="card_descr2">Водне поло трохи більш популярний вид спорту в Україні. Хоча
+                                        це
+                                        все відносно, якщо порівняти із Сербією, Чорногорією, Хорватією, Італією чи
+                                        Австралією. Водне поло найбільш популярне у Львові, Харкові та Маріуполі.
+                                        Представники саме цих міст перемогли майже в усіх чемпіонатах України.</p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="florball.jpeg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Флорбол</p>
+                                    </b>
+                                    <p class="card_descr2">Про такий вид спорту ви могли нічого і не чути. Флорбол – це
+                                        різновид хокею в залі, у якому потрібно ключкою забити м’яч у ворота. Гра
+                                        відбувається на звичайному паркетному покритті, а розміри майданчика – 20 на 40
+                                        метрів. Грають, як і у хокеї, три періоди по 20 хвилин. </p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="bandy.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Бенді</p>
+                                    </b>
+                                    <p class="card_descr2">Ще один різновид хокею, який дуже популярний у Скандинавії і
+                                        Росії.
+                                        Бенді або хокей з м’ячем – це такий собі футбол на льоду або хокей на
+                                        футбольному
+                                        стадіоні. Грають тут, як і у футболі, 11 на 11 на великому футбольному полі, яке
+                                        залите
+                                        льодом.
+                                    </p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="skvosh.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Сквош</p>
+                                    </b>
+                                    <p class="card_descr2">Сквош – перший вид спорту у нашому списку не командний, а
+                                        особистий.
+                                        Сквош схожий на теніс. Тут також є ракетка, є м’яч і є два гравці, але замість
+                                        сітки, є
+                                        стіна, у яку кожен гравець по черзі має влучити м’ячем так, щоб суперник не зміг
+                                        відбити.</p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="motoball.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Мотобол</p>
+                                    </b>
+                                    <p class="card_descr2">Мотобол – такий собі футбол на мотоциклах. Грають у мотобол
+                                        на
+                                        полі
+                                        за розмірами як футбольне, але покриття не трав’яне, а гареве або асфальтоване.
+                                        Ворота
+                                        схожі на футбольні, а от м’яч набагато більший. У кожній команді грає 4 гравці і
+                                        воротар.
+                                    </p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="cards_item2">
+                            <article class="card2">
+                                <div class="card_image2">
+                                    <img src="speedway.jpg" alt="">
+                                </div>
+                                <div class="card_content2">
+                                    <b>
+                                        <p class="card_title2">Спідвей</p>
+                                    </b>
+                                    <p class="card_descr2">Спідвей – це кільцеві перегони на коротку дистанцію на
+                                        спеціальній
+                                        гаревій доріжці. Із спідвею є як особисті чемпіонати, так і у парах і у
+                                        командах. У
+                                        світі спідвей найбільш популярний у Австралії, Данії, Швеції, Польщі. В Україні
+                                        на
+                                        професійному рівні спідвеєм займались у Львові, Червонограді та Рівному.</p>
+                                    <button class="card_btn2">Більше...</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                </ul>
+
+
+        </section>
+
+        <div class="more-info-div">
+            <div class="close-more-div">x</div>
+            <p class="more-text"></p>
+        </div>
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="https://uk-ua.facebook.com/" class="socio-link fsb"> <i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="socio-link inst"> <i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="socio-link yout"> <i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com/?lang=ru" class="socio-link  tw"> <i
+                                class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="col-sm-6 text-md-end">
+                        <p class="prava">©Всі права захищені</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+
+        let btnShowMore = document.querySelectorAll('.card_btn2');
+        let moreInfoDiv = document.querySelector('.more-info-div');
+        let moreTextSport = document.querySelector('.more-text');
+        let closeMoreDiv = document.querySelector('.close-more-div');
+
+        let sportData = [
+            'Під час битви в Арденнах американські солдати використовують свої знання правил гри в бейсбол, щоб визначити, хто є американцем, а хто німецьким диверсантом. Наприкінці Другої світової війни гранату T13 Beano успішно розробили у США, і її форму, вагу та розмір максимально наблизили до звичайного бейсбольного м’яча.У Чехії та інших країнах Європи дуже популярний софтбол. Це спрощена версія бейсболу.У 19 столітті судді не були професіоналами – на цю посаду могли претендувати будь-які багаті й авторитетні жителі міста.Вважається, що історія сучасного бейсболу бере свій початок у 14 столітті, коли у Франції стали популярними ігри з м’ячем і битою.Капелюх під назвою “бейсболка” дуже популярний у всьому світі. Спочатку вони дійсно призначалися для бейсболістів. Бейсболки були зроблені New Era в середині 20-го століття для захисту гравців від сонця під час гри.Бейсбол – дуже травматичний вид спорту. Найчастіше трапляються травми колінних чашок, плечових суглобів, розтягнення м’язів і пошкодження зв’язок.В історії професійного бейсболу зафіксовано навіть смерть спортсмена на полі. У 1920 році Раймонд Чепмен (Raymond Chapman) був поранений м’ячем і помер. Після цієї трагедії гравцям рекомендується надіти захисні шоломи.Бейсбол був включений в Олімпійські ігри 1904 року. Та тільки в неофіційній формі.Перед грою всі кулі, що використовуються в грі MLB, протираються спеціальним брудом. Де цей бруд – ніхто не знає. Тільки одна людина володіє інформацією і продає м’яч.Хоча більшість бейсболістів мешкає у Сполучених Штатах, ця країна виграла чемпіонат світу всього чотири рази. На той момент Куба здобула 25 перемог.У 1920-ті роки Бейб Рут вважався найкращим бейсболістом США. Рут отримав багато гонорарів за свій виступ. Колись його критикували за те, що річний дохід бейсболістів перевищує зарплату президента США.Цікавий факт про бейсбол – бейсбол швидко став більше, ніж просто розвагою, він перетворився на серйозний бізнес. Уже 1871 року в США було засновано першу професійну бейсбольну лігу.У наші дні бейсболісти часто входять до числа найбагатших спортсменів світуСучасні бейсбольні біти не можуть перевищувати 107 см завдовжки і 7 см у діаметрі.Професійні бейсболісти повинні використовувати біти, повністю зроблені з дерева і без будь-яких інших матеріалів.Виявляється, 1744 року в Лондоні видали “цікаву кишенькову книжку”, в якій йшлося про бейсбол і навіть було кілька ілюстрацій. Це означає, що батьківщиною бейсболу є не США, а Англія.У 1845 році Александр Картрайт написав Єдині правила бейсболу, які були офіційно затверджені 19 червня 1846 року. Цей день – день народження бейсболу, а місцем його народження вважається Хобокен, штат Нью-Джерсі.',
+            'Декілька місяців тому ми з вами у межах спортивної рубрики обговорювали феномен такого спортивного заходу, як Super Bowl. Тоді переважну більшість матеріалу було присвячено саме поп-культурному впливу і тим подіями, які відбуваються навколо. Про сам фінальний матч з американського футболу було сказано мало, тому сьогодні ми заглибимося в історію та подивимося, як взагалі з’явився цей прекрасний спорт, заради якого у США вигадали інше слово для футболу, щоб не плутатися. Цікавий факт, до речі. Слово «соккер», яким американці, канадці та австралійці називають європейський футбол, зовсім не образлива вигадка колоністів. Термін зявився саме у Великій Британії, серед студентів Оксфорда і Кембриджа, але прижився саме в США,де треба було розрізняти дві різні ігри.Американський футбол — найпопулярніший вид спорту у США як серед уболівальників (адже його називають своїм улюбленим виглядом близько 40% глядачів одного з найбільших у США спортивних телеканалів ESPN), так і серед спортсменів. Саме в американський футбол грають найбільше учнів шкіл та студентів коледжів.',
+            'Кілька років Шотландія і Англія розігрували власні чемпіонати, тільки в 1890 році відбувся перший міжнародний матч між цими збірними. Зустріч закінчилася перемогою Шотландії з рахунком 4:0. Поступово гра поширилася по всіх Британських островах, а потім і по Європі.Екіпірування ватерполістів просте: гумова шапочка і плавки. Причому, шапочки воротарів повинні бути червоного кольору. У кожній команді по сім гравців: воротар і шість польових. Матч складається з чотирьох періодів по вісім хвилин чистого часу в кожному. Кожній команді дається на атаку 30 секунд, якщо за цей час не було зроблено кидка по воротах, то мяч передається супернику.Тримати мяч двома руками може тільки воротар. Заборонено топити мяч і відштовхуватися ногами від дна басейну. Вага мяча від 400 до 450 г., він повинен мати довжину по окружності від 68 до 71 сантиметра. Природно, що він повинен бути вологонепроникним, так як гра проходить у воді.Водне поло - «старожил» Олімпійських ігор, в програму яких він був включений ще в 1900 році, спочатку в якості демонстраційного виду. Довгий час цей вид спорту був виключно чоловічим. Але, наполеглива боротьба жінок за свої права призвела до того, що з 2000 року і вони отримали право виступати на Олімпіадах.Деякі екстремали грають у водне поло навіть взимку в ополонці. Наприклад, у 2017 році в Єкатеринбурзі, при температурі в мінус 10 градусів, відбувся матч між командами «Від Морозки» і «Діди Морози». Правила були суворими, заміни не дозволялися, якщо хтось із гравців залишав «поле бою», то його команда продовжувала гру в меншості.У нашій країні про водне поло дізналися ще до революції. Найперша гра відбулася в 1910 році в Шувалівській школі плавання недалеко від Санкт-Петербурга. Незабаром грою зацікавилися і в Москві, причому, в холодну пору року використовували для проведення матчів басейн знаменитих Сандунівських лазень. А в 1913 році пройшла перша зустріч збірних Москви і Санкт-Петербурга. Спортсмени з Петербурга перемогли з рахунком 3:2.Найтитулованішим ватерполістом у світі є угорський спортсмен Деже Дьярматі. Він виступав на пяти Олімпіадах поспіль (1948 - 1964рр.), і жодного разу не залишав турнір без медалі. Тричі Дьярматі був чемпіоном, по одному разу отримував срібну і бронзову нагороди. Завершивши виступи, він став тренером і виграв зі збірною Угорщини Олімпійські ігри 1976 року.Чоловіча збірна СРСР в 1972 і 1980 рр. була чемпіоном Олімпійських ігор. Імена трьох радянських спортсменів - Олександра Кабанова, Олексія Баркалова та Євгена Шаронова - внесено до списків Залу слави водної статі у Форт-Лодердейлі (США).Під час Олімпіади 1956 року в Мельбурні в півфінальному матчі зустрілися збірні Радянського Союзу та Угорщини. Відносини між країнами в той час були напруженими. У басейні спалахнула бійка, матч довелося припинити. Збірна Угорщини була оголошена переможцем, так як вела в рахунку до того моменту. А збірній СССР довелося боротися лише за бронзові нагороди. Матч СССР - Угорщина увійшов в історію під назвою «Кров у басейні». Після закінчення Олімпіади 40 угорських спортсменів зі 113 попросили політичного притулку. Серед них були і кілька ватерполістів. Ервін Задор поїхав до США, де довгі роки працював тренером з плавання. Серед його вихованців був багаторазовий олімпійський чемпіон Марк Спітц. Зустріч учасників битви в басейні відбулася в 2002 році. Цього разу все пройшло мирно, колишні спортсмени заявили, що пройшло багато часу і у них не залишилося ніяких образ один на одного.У 1929 - 1936 рр. ворота збірної СРСР з водного поло захищав Валерій Буре, дід знаменитих хокеїстів Павла і Валерія Буре. А сам Валерій Володимирович був двоюрідним онуком Павла Буре, знаменитого годинникового майстра.8-річний хлопчик з Будапешта Олівер Халашші в 1918 році потрапив під трамвай і позбувся частини лівої ноги нижче коліна. Але, він наполегливо мріяв про те, що стане відомим спортсменом. І його мрія збулася: Халашші тричі виступав на Олімпіадах у складі збірної Угорщини, двічі ставав чемпіоном. Крім того, Олівер Халашші був одним з найсильніших спортсменів своєї країни в двадцятих-тридцятих роках.На чемпіонаті світу 2019 року жіноча збірна Угорщини обіграла суперниць з Південної Кореї з рахунком 64:0. Як виявилося, корейська збірна була нашвидкуруч сформована з плавчин, що мали про правила гри досить смутне уявлення.',
+            'Торкатися мяча можна тільки ключкою. Ногою дозволяється лише зупиняти мяч, але не атакувати ворота. Також можна зупинити мяч корпусом, але без стрибка.Матч складається з 3-х періодів, тривалістю 20 хвилин. Між періодами є 10-хвилинна перерва.Протягом гри кожна команда має право взяти тайм-аут на 30 секунд.Якщо матч, в якому обовязково повинен бути переможець, закінчився нічиєю, команди грають додатковий час (10 хвилин). Якщо і овертайм завершився внічию, призначають по 5 штрафних кидків для кожної команди.Кожна команда може задіяти до 20 гравців. На поле в один і той же час дозволено бути присутнім не більше, ніж 6 гравцям.У кожної команди повинен бути капітан.Матч судять 2 арбітра.Якщо мяч опиняється за межами ігрового майданчика однієї з команд, призначається вступний удар, який виконує команда-суперник.Воротареві заборонено використовувати ключку.При виконанні штрафного або вільного ударів суперники повинні стояти від мяча на відстані 3-х метрів.Торкатися мяча головою дозволено тільки голкіперу..',
+            'Хоке́й із мячем, також бе́нді (англ. bandy) — спортивна командна зимова гра, яка проходить на льодовому полі за участі двох команд. В Україні офіційно використовують термін «хокей із мячем», хоча у світі більш поширена назва «бенді».Матч між шведськими командами ІФК Мутала та АІК Лінчепінг. Січень 201Розмітка поля для гри в хокей з мячем Збірна України, де ігри в хокей з мячем мають організований та регулярний характер, мають відповідні федерації або асоціації, які входять до Федерації міжнародного бенді (Federation of International Bandy). Бенді був представлений на Зимових Олімпійських іграх 1952 в Осло як показова олімпійська дисципліна. Як вид спорту бенді визнаний Міжнародним олімпійським комітетом, однак офіційно в Олімпійську програму на зимові ігри досі не включений. Одна з причин — мала кількість країн, де розвинений цей вид спо. ',
+            'Сквош – це гра з історією: зародившись у в’язницях, вона змогла здобути статус елітарної та джентельменської. Проте гравців у сквош об’єднує насамперед лідерське мислення, а не приналежність до певного класу. Понад 25 мільйонів людей у світі займаються сквошем і цікавість до гри щороку зростає, будуються нові корти і проводяться турніри. Сквош є найбільш імовірним претендентом на включення в програму Олімпійських ігор у 2024 році. Ми відібрали 10 цікавих фактів про сквош, які заслуговують вашої уваги.1. Сквош виник у в’язниціОфіційним місцем зародження сквошу вважають заміську школу в Лондоні, де у 1890 році школярі спробували відбивати від стіни м’який м’яч. Адміністрація закладу забороняла використання жорстких м’ячів, бо це могло пошкодити будівлю, тому учні користувалися м’якими гумовими, які не завдають шкоди поверхням стін.Перші згадки про сквош датуються 1807 роком у книзі про побут лондонців. Там розповідається про безпечних злочинців, таких як ув’язнені вищого класу Лондонської боргової в’язниці, які грали в гру схожу «на ракетки». Мета гри полягала у відбиванні м’яча у стіни в’язниці, що було одним з видів фізичних тренувань та способів проведення часу для ув’язнених.2. Чому гра називається сквош?Назва гри пов’язана з прямим значенням слова «squash», що, у перекладі з англійської, означає «розплющений» або «гарбуз, патисон».Перші гравці використовували м’ячики із натурального каучуку, які дуже легко деформувалися і сплющувалися від удару об стіну. Відповідно, через розплющення м’ячів гру назвали сквош.Сучасні м’ячі для сквошу залишаються дуже м’якими, але виготовляються з більш міцних матеріалів, ніж каучук, тому не розплющуються і відбиваються неушкодженими.3. Перший у світі ядерний реактор побудували в залі для гри у сквошУ 1942 році італійський фізик Енріко Фермі з колегами таємно спроєктували і збудували перший у світі атомний реактор. Місцем для будівництва обрали університетський сквош-корт у центрі міста Чикаго.Конструкція складалася із 45 тисяч графітових цеглин, між якими були розташовані шари з природного урану. Реактор отримав назву «Чиказька дровітня» (Chicago Pile-1, CP-1). 4. Корти для сквошу існують майже у 200 країнах світуЗа 200 років існування сквош з лондонської в’язниці поширився на весь світ. Згідно з даними Всесвітньої федерації сквошу, у сквош грають більше 25 мільйонів людей на 50 000 кортах у 186 країнах світу. Щонайменше в 10 країнах сквош є популярнішим за хокей.5. У 2003 сквош визнали найбільш здоровим видом спорту за версією американського журналу ForbesОсновними критеріями відбору були: мязова сила, витривалість, гнучкість, кількість витрачених калорій, кардіореспіраторні навантаження і ризик отримання травми.6. Година сквошу може спалити до 1500 калорійСквош вимагає залученості всіх груп м’язів, абсолютної зосередженості на пересуванні м’яча та оперативного реагування. Це забезпечує якісне тренування серцево-судинної і дихальної систем та дозволяє спалювати від 600 до 1500 калорій за одну годину гри, більше ніж плавання, біг чи їзда на велосипеді за такий проміжок часу. Навантаження години гри можна порівняти з бігом на дистанцію до 15 км.7. Корт для гри у сквош був на кораблі «ТитанікТривалий час сквош вважався грою для еліти, тому  скористатися кортом на «Титаніку» могли лише пасажири першого класу.У примітці до схеми «Титаніка» було записано: «Корт для гри у сквош розташований на палубі F і знаходиться у веденні професійного гравця. Квитки на використання корту можна отримати в офісі замовлень, і, при бажанні, оплатити послуги професійного тренера: 50 центів (у басейн квиток коштував 1 долар) за пів години. Мячі можна придбати у тренера, у нього ж можна купити або орендувати ракетку. На платній основі можна заздалегідь зарезервувати корт у тренера, але не дозволяється займати його більш ніж на годину, якщо є інші охочі».8. Найпрестижніші змагання зі сквошу проводяться у відомих та знакових місцях.Серед найвідоміших: Трафальгарська площа у Лондоні, підніжжя Єгипетських пірамід, історичний вокзал Нью-Йорка – Гранд сентрал стейшн.9. Королівська сім’я Британії вважає сквош одним із найкращих видів спорту та активно займається нимПринц Філіп навіть грав у сквош під час народження свого первістка. За традицією британської корони чоловіків не допускають до пологів, тому він обрав улюблений спорт для очікування народження сина.10. Принц Монако Реньє III (чоловік Грейс Келлі) грав у сквош щодняВін правив Монако протягом 56 років і є одним з найвідоміших монархів-довгожителів у європейській історії, що знаходився при владі так довго.Можливо, секрет його довголіття - це щоденна гра у сквош, яка допомагала підтримувати здоров’я та фізичну форму?. ',
+            'У 1930-х роках в Європі почали грати в мотобол — футбол на мотоциклах. Історію цього дивного спорту розповідає WAS.За основною легендою, новий спорт винайшли 1930 року французькі мотоциклісти, які вирішили пограти на мотоциклах у футбол. Хоча іноді першість французів намагаються заперечити англійці, але у Франції мотобол точно став популярнішим: вже 1932 року в країні почали започатковувати мотобольні клуби, а 1933-го відбувся перший офіційний чемпіонат, перемогу на якому здобула команда «СУМА» з міста Труа. Того ж року «СУМА» перемогла у першому в історії міжнародному матчі з мотоболу, перегравши з рахунком 3:1 англійців «Честер-мотоклуб».',
+            'Спідве́й (від англ. speed («швидкість») та way («дорога»), в Польщі — «жужель», в Чехії — «плоха драга») — мотоциклетні перегони на трасах, схожих за формою на еліпс, одна з дисциплін автоспорту. На спідвеї учасники змагаються в т. зв заїздах, кількість яких залежить від виду змагань (наприклад, в індивідуальних змаганнях - мінімум 20 заїздів, у матчі ліги між 2 командами - 15 заїздів, у парних змаганнях - 21 заїзд). Під час заїзду учасники роблять чотири повних кола траси, завжди йдучи проти годинникової стрілки (загально кажучи: «наліво»). Доріжки, які використовуються для змагань зі спідвею, мають насипне покриття, нині виготовлене зі спеціальних сумішей сієніту або граніту. Мотоцикли для спідвею мають особливу конструкцію, і напр. у них немає ні коробки передач, ні гальм. Цей вид спорту популярний переважно в Європі, зокрема в Польщі, Великій Британії, Данії, Швеції (донедавна також у Чехії, а раніше в Чехословаччині), меншою мірою в інших країнах Європи, тобто в Німеччині, Фінляндія, Словенія, Угорщина, Італія, Латвія, Україна, Франція, Норвегія, Австрія, Нідерланди, Словаччина, Румунія, Болгарія та Хорватія, тобто де є хоча б одна активна траса для занять цією дисципліною. За межами Європи популярна (точніше: практикована) дисципліна в основному в Австралії, Новій Зеландії та Сполучених Штатах, регулярні змагання також проводяться в Аргентині..'
+        ]
+
+
+
+        closeMoreDiv.onclick = () => {
+            moreInfoDiv.style.width = '0px';
+            moreInfoDiv.style.display = 'none';
+
+        }
+        for (let i = 0; i < btnShowMore.length; i++) {
+            btnShowMore[i].onclick = function () {
+                moreTextSport.innerHTML = sportData[i];
+                moreInfoDiv.style.display = 'block';
+                moreInfoDiv.style.animation = 'move 0.5s';
+                console.log('azaza');
+                setTimeout(() => {
+                    moreInfoDiv.style.width = '350px';
+
+                }, 400);
+            }
+        }
+
+        let btnTop = document.querySelector('.move-top');
+        btnTop.style.display = 'none'
+        function showBtnTop() {
+
+            let height = window.innerHeight;
+            console.log(height + 'height');
+            if (window.scrollY > height) {
+                btnTop.style.display = 'flex'
+            }
+            else {
+                btnTop.style.display = 'none'
+            }
+        }
+        window.addEventListener('scroll', showBtnTop);
+        // ScrollReveal().reveal('.tema-1', { reset: true, origin: 'top', delay: 700, distance: '50px' });
+        // ScrollReveal().reveal('.tema-2', { reset: true, origin: 'top', delay: 700, distance: '50px' });
+        // ScrollReveal().reveal('.tema-3', { reset: true, origin: 'top', delay: 700, distance: '50px' });
+        ScrollReveal().reveal('.text-1', { reset: true, origin: 'top', delay: 200, distance: '50px' });
+        ScrollReveal().reveal('.Yakisna', { reset: true, origin: 'left', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.cont-1', { reset: true, origin: 'left', delay: 600, distance: '100px' });
+        ScrollReveal().reveal('.gym-1', { reset: true, origin: 'right', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.pokrash', { reset: true, origin: 'right', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.cont-2', { reset: true, origin: 'right', delay: 600, distance: '100px' });
+        ScrollReveal().reveal('.gym-2', { reset: true, origin: 'left', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.gartyvan', { reset: true, origin: 'left', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.cont-3', { reset: true, origin: 'left', delay: 600, distance: '100px' });
+        ScrollReveal().reveal('.gym-3', { reset: true, origin: 'right', delay: 400, distance: '100px' });
+        ScrollReveal().reveal('.mot', { reset: true, origin: 'top', delay: 200, distance: '50px' });
+        ScrollReveal().reveal('.cards_item', { reset: true, origin: 'left', delay: 300, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.nav-item', { reset: true, duration: 500, interval: 500, origin: 'top', distance: '50px' });
+        ScrollReveal().reveal('.kinds', { reset: true, origin: 'top', delay: 200, distance: '50px' });
+        ScrollReveal().reveal('.cards_item2', { reset: true, origin: 'left', delay: 300, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.fsb', { reset: true, origin: 'left', delay: 700, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.inst', { reset: true, origin: 'left', delay: 500, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.yout', { reset: true, origin: 'left', delay: 300, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.tw', { reset: true, origin: 'right', delay: 100, distance: '100px', interval: 500 });
+        ScrollReveal().reveal('.prava', { reset: true, origin: 'right', delay: 100, distance: '100px', interval: 500 });
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
